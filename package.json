@@ -4,11 +4,11 @@
   "description": "Corona Live Stats",
   "main": "app.js",
   "scripts": {
-    
-    "start" : "node app.js"
+    "start": "node app.js"
   },
   "engines": {
-    "node":"12.5.0"
+    "node": "12.5.0",
+    "npm": "6.9.0"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/Jain-Sanchit/LiveCoronaStats/issues"
   },
-  "homepage": "https://github.com/Jain-Sanchit/LiveCoronaStats#readme"
+  "homepage": "https://github.com/Jain-Sanchit/LiveCoronaStats#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
