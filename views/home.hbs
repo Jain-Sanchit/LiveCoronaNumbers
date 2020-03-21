@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corona Updates</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<style>
+    .foot{
+         position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
+  text-align: center;
+    }
+</style>
+<body>
+
+    <div class="container text-center">
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="https://images.newscientist.com/wp-content/uploads/2020/02/11165812/c0481846-wuhan_novel_coronavirus_illustration-spl.jpg?"
+                    width="50" height="50" class="d-inline-block align-top" alt="">
+                <strong><span>The CoronoMeter</span> </strong>
+            </a>
+        </nav>
+        <br><br>
+        <h1 style="color: gray; background:linen">CORONA LATEST UPDATES AND FIGURES WORLDWIDE</h1>
+        <br><br><br>
+
+        <h2 >Total Cases: <span style="color: red;">{{data.cases}}</span></h2>
+        
+        <a href="/countryWise"><u>View by Country</u></a>
+        <br>
+        <br>
+        <h2>Total Deaths: <span style="color:slategrey;">{{data.deaths}}</span> </h2>
+        <br><br>
+        <h2  >Total Recovered: <span style="color: yellowgreen;">{{data.recovered}}</span></h2>
+        <br><br>
+        <h3>Last Updated on : {{d}} </h3>
+        <footer class="foot">
+            <p>Made by Jain-Sanchit</p>
+        </footer>
+    </div>
+
+
+</body>
+
+</html>
