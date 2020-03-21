@@ -1,0 +1,26 @@
+{
+  "name": "corona",
+  "version": "1.0.0",
+  "description": "Corona Live Stats",
+  "main": "app.js",
+  "scripts": {
+    
+    "start" : "node app.js"
+  },
+  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jain-Sanchit/LiveCoronaStats.git"
+  },
+  "keywords": [
+    "Live",
+    "Corona",
+    "Stats"
+  ],
+  "author": "Sanchit Jain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jain-Sanchit/LiveCoronaStats/issues"
+  },
+  "homepage": "https://github.com/Jain-Sanchit/LiveCoronaStats#readme"
+}

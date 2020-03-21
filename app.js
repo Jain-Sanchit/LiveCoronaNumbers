@@ -56,6 +56,4 @@ app.get('/countryWise',async(req,res)=>{
             // Do something for an error here
         })
 })
-app.listen(8080, () => {
-  console.log("Running on 8080");
-});
+app.listen(process.env.PORT || 8080);
