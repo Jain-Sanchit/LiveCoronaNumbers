@@ -26,6 +26,8 @@
   },
   "homepage": "https://github.com/Jain-Sanchit/LiveCoronaStats#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "hbs": "^4.1.0",
+    "novelcovid": "^1.0.5"
   }
 }
