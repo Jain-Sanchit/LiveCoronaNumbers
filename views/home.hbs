@@ -5,37 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corona Updates</title>
+    <script data-ad-client="ca-pub-5462967269540232" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
 </head>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <style>
-    html{
-  position:relative; 
-  min-height: 100%;
-}
-    body {
-   min-height: 400px;
-   margin-bottom: 100px;
-   clear: both;
-   padding: 25px;
-}
-    .foot{
-         position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-
-  text-align: center;
+    html {
+        position: relative;
+        min-height: 100%;
     }
-    #h2{
+
+    body {
+        min-height: 400px;
+        margin-bottom: 100px;
+        clear: both;
+        padding: 25px;
+    }
+
+    .foot {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+
+        text-align: center;
+    }
+
+    #h2 {
         padding-bottom: 35px;
     }
-    h3{
-        padding-top: 25px;;
-    }
 
-    
+    h3 {
+        padding-top: 25px;
+        ;
+    }
 </style>
+
 <body>
 
     <div class="container text-center">
@@ -48,17 +55,17 @@
         </nav>
         <br><br>
         <h1 style="color: gray; background:linen">CORONA LATEST UPDATES AND FIGURES WORLDWIDE</h1>
-        
 
-        <h2 >Total Cases: <span style="color: red;">{{data.cases}}</span></h2>
-        
+
+        <h2>Total Cases: <span style="color: red;">{{data.cases}}</span></h2>
+
         <a href="/countryWise"><u>View by Country</u></a>
         <br>
         <br>
         <h2 id="h2">Total Deaths: <span style="color:slategrey;">{{data.deaths}}</span> </h2>
-        
-        <h2 id="h2" >Total Recovered: <span style="color: yellowgreen;">{{data.recovered}}</span></h2>
-        
+
+        <h2 id="h2">Total Recovered: <span style="color: yellowgreen;">{{data.recovered}}</span></h2>
+
         <h3>Last Updated on : <span style="color: darkcyan;">{{d}}</span></h3>
         <footer class="foot">
             <p>Made by Jain-Sanchit</p>
