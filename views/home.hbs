@@ -27,6 +27,14 @@
 
   text-align: center;
     }
+    #h2{
+        padding-bottom: 35px;
+    }
+    h3{
+        padding-top: 25px;;
+    }
+                        
+    
 </style>
 <body>
 
@@ -40,18 +48,18 @@
         </nav>
         <br><br>
         <h1 style="color: gray; background:linen">CORONA LATEST UPDATES AND FIGURES WORLDWIDE</h1>
-        <br><br><br>
+        
 
         <h2 >Total Cases: <span style="color: red;">{{data.cases}}</span></h2>
         
         <a href="/countryWise"><u>View by Country</u></a>
         <br>
         <br>
-        <h2>Total Deaths: <span style="color:slategrey;">{{data.deaths}}</span> </h2>
-        <br><br>
-        <h2  >Total Recovered: <span style="color: yellowgreen;">{{data.recovered}}</span></h2>
-        <br><br>
-        <h3>Last Updated on : {{d}} </h3>
+        <h2 id="h2">Total Deaths: <span style="color:slategrey;">{{data.deaths}}</span> </h2>
+        
+        <h2 id="h2" >Total Recovered: <span style="color: yellowgreen;">{{data.recovered}}</span></h2>
+        
+        <h3>Last Updated on : <span style="color: darkcyan;">{{d}}</span></h3>
         <footer class="foot">
             <p>Made by Jain-Sanchit</p>
         </footer>
