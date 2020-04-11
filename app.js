@@ -85,7 +85,7 @@ app.get('/countryWiseYesterday', async (req, res) => {
             // data = JSON.stringify(data)
             res.render("countryYesterday", { data: data });
             //console.log(data)
-        }).then(null,'sort-by')
+        })
         .catch(err => {
             // Do something for an error here
         })
