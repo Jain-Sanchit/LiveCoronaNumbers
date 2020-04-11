@@ -7,7 +7,8 @@
     <title>Corona Updates</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script data-ad-client="ca-pub-5462967269540232" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script data-ad-client="ca-pub-5462967269540232" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 </head>
 <style>
@@ -64,9 +65,11 @@
 
         text-align: center;
     }
-    #flag{
+
+    #flag {
         height: 18px;
-        width: 25px;;
+        width: 25px;
+        ;
     }
 </style>
 
@@ -83,8 +86,7 @@
 
         <h1>Confirmed Cases and Deaths by Country</h1>
         <a href="/"><u>View total figures</u></a>
-        <a href="/countryWiseYesterday">Yesterday numbers</a>
-        <a href="/USAstates">USA state wise</a>
+        <a href="/countryWise"><u>Current live stats </u></a>
         <br>
         <table class="table" style="width: 90%;" border="1">
             <thead>
@@ -106,7 +108,8 @@
             <tbody>
                 {{#each data}}
                 <tr id="tdd">
-                    <td style="text-align: left;">{{this.country}} <img src="{{this.countryInfo.flag}}" alt="flag" id="flag"></td>
+                    <td style="text-align: left;">{{this.country}} <img src="{{this.countryInfo.flag}}" alt="flag"
+                            id="flag"></td>
                     <td id="cases">{{this.cases}}</td>
                     <td><strong>+ </strong>{{this.todayCases}}</td>
                     <td>{{this.deaths}}</td>

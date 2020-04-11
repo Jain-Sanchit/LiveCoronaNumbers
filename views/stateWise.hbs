@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State Wise</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<style>
+    .card{
+        margin: 15px;;
+    }
+    
+</style>
+<body>
+    <div class="container">
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="https://images.newscientist.com/wp-content/uploads/2020/02/11165812/c0481846-wuhan_novel_coronavirus_illustration-spl.jpg?"
+                width="50" height="50" class="d-inline-block align-top" alt="">
+            <strong><span>The CoronoMeter</span> </strong>
+        </a>
+    </nav>
+    <br><br>
+    <h1 style="color: gray; background:linen">CORONA LATEST UPDATES AND FIGURES IN USA STATES</h1>
+       
+       <h4><a href="/">View Total Figures</a></h4>
+       <h4><a href="/countryWise">View All Country figures</a></h4>
+       
+       <div class="row justify-content-around">
+        {{#each data}}
+            <div class="col-md-3-sm-6">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body" style="text-align: center;background-color:snow">
+                        <h5 class="card-title" >{{this.state}}</h5>
+                        <hr>
+                        <h5 class="card-text">Cases: <strong>{{this.cases}}</strong></h5>
+                        <h6>Today Cases : <strong style="color: salmon;">{{this.todayCases}}</strong></h6>
+                        <h6>Deaths : <strong>{{this.deaths}}</strong></h6>
+                        <h6>Today Deaths : <strong style="color: red;">{{this.todayDeaths}}</strong></h6>
+                        <h6>Tests : <strong>{{this.tests}}</strong></h6>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+        </div>
+
+    
+    </div>
+</body>
+</html>
