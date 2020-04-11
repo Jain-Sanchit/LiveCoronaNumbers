@@ -59,12 +59,12 @@ app.get("/yesterday", async (req, res) => {
 
 });
 app.get('/countryWise',async(req,res)=>{
-    let data = await fetch('https://corona.lmao.ninja/countries')
+    let data = await fetch('https://corona.lmao.ninja/countries?sort=cases')
         .then(response => {
             return response.json()
         })
         .then(data => {
-            data.sort((a, b) => parseFloat(b.cases) - parseFloat(a.cases));
+            //data.sort((a, b) => parseFloat(b.cases) - parseFloat(a.cases));
             // Work with JSON data here
            // data = JSON.stringify(data)
             res.render("countryWise", { data:data});
@@ -75,17 +75,17 @@ app.get('/countryWise',async(req,res)=>{
         })
 })
 app.get('/countryWiseYesterday', async (req, res) => {
-    let data = await fetch('https://corona.lmao.ninja/countries?yesterday=true')
+    let data = await fetch('https://corona.lmao.ninja/countries?yesterday=true&sort=cases')
         .then(response => {
             return response.json()
         })
         .then(data => {
-            data.sort((a, b) => parseFloat(b.cases) - parseFloat(a.cases));
+            //data.sort((a, b) => parseFloat(b.cases) - parseFloat(a.cases));
             // Work with JSON data here
             // data = JSON.stringify(data)
             res.render("countryYesterday", { data: data });
             //console.log(data)
-        })
+        }).then(null,'sort-by')
         .catch(err => {
             // Do something for an error here
         })
