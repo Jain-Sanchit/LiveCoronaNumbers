@@ -75,7 +75,7 @@ app.get('/countryWise',async(req,res)=>{
         })
 })
 app.get('/countryWiseYesterday', async (req, res) => {
-    let data = await fetch('https://corona.lmao.ninja/countries?yesterday=true&sort=cases')
+    let data = await fetch('https://corona.lmao.ninja/yesterday?sort=cases')
         .then(response => {
             return response.json()
         })
