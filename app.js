@@ -20,7 +20,7 @@ hbs.registerPartials(__dirname + "/partials");
 
 app.get("/", async (req, res) => {
     count++;
-  let data = await fetch("https://corona.lmao.ninja/all")
+  let data = await fetch("https://corona.lmao.ninja/v2/all")
     .then((response) => {
       return response.json();
     })
@@ -86,7 +86,7 @@ app.get("/India", async (req, res) => {
 });
 
 app.get("/yesterday", async (req, res) => {
-  let data = await fetch("https://corona.lmao.ninja/yesterday/all")
+  let data = await fetch("https://corona.lmao.ninja/v2/yesterday/all")
     .then((response) => {
       return response.json();
     })
