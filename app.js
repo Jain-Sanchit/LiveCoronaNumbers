@@ -104,7 +104,7 @@ app.get("/yesterday", async (req, res) => {
     });
 });
 app.get("/countryWise", async (req, res) => {
-  let data = await fetch("https://corona.lmao.ninja/countries?sort=cases")
+  let data = await fetch("https://corona.lmao.ninja/v2/countries?sort=cases")
     .then((response) => {
       return response.json();
     })
@@ -122,7 +122,7 @@ app.get("/countryWise", async (req, res) => {
     });
 });
 app.get("/countryWiseYesterday", async (req, res) => {
-  let data = await fetch("https://corona.lmao.ninja/yesterday?sort=cases")
+  let data = await fetch("https://corona.lmao.ninja/v2/yesterday?sort=cases")
     .then((response) => {
       return response.json();
     })
@@ -138,7 +138,7 @@ app.get("/countryWiseYesterday", async (req, res) => {
     });
 });
 app.get("/USAstates", async (req, res) => {
-  let data = await fetch("https://corona.lmao.ninja/states")
+  let data = await fetch("https://corona.lmao.ninja/v2/states")
     .then((response) => {
       return response.json();
     })
