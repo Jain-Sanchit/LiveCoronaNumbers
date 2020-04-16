@@ -45,8 +45,36 @@ app.get("/", async (req, res) => {
   
 });
 
+app.get('/care',async(req,res)=>{
+    let data = await fetch('https://api.covid19india.org/website_data.json')
+    .then(response=>{
+        return response.json();
+    })
+    .then(data=>{
+        //console.log(data);
+        var st=data.factoids;
+        res.render("things", { st });
+    })
+    .catch(err=>{
+        
+    })
+})
+app.get('/faq', async (req, res) => {
+    let data = await fetch('https://api.covid19india.org/website_data.json')
+        .then(response => {
+            return response.json();
+        })
+        .then(data => {
+            //console.log(data);
+            var st = data.faq;
+            //console.log(st);
+            
+            res.render("faq", { st });
+        })
+        .catch(err => {
 
-
+        })
+})
 app.get('/India',async(req,res)=>{
     let data = await fetch('https://api.covid19india.org/data.json')
     .then(response=>{
