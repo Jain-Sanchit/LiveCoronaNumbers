@@ -13,6 +13,13 @@ const fetch = require("node-fetch");
 app.set('view engine', 'hbs')
 app.use(express.urlencoded({ extended: true }));
 
+
+hbs.registerHelper('ifEquals', function (arg1, arg2, options) {
+    return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+});
+
+hbs.registerPartials(__dirname + '/partials');
+
 app.get("/", async (req, res) => {
     let data = await fetch('https://corona.lmao.ninja/all')
         .then(response => {
@@ -37,6 +44,27 @@ app.get("/", async (req, res) => {
         
   
 });
+
+
+
+app.get('/India',async(req,res)=>{
+    let data = await fetch('https://api.covid19india.org/data.json')
+    .then(response=>{
+        return response.json()
+    })
+    .then(data=>{
+        var d=new Date();
+        //console.log(data.statewise[0]);
+        var st=data.statewise;
+       // console.log(st);
+        
+        res.render('india',{st,d});
+    })
+    .catch(err=>{
+
+    })
+})
+
 app.get("/yesterday", async (req, res) => {
     let data = await fetch('https://corona.lmao.ninja/yesterday/all')
         .then(response => {
@@ -67,6 +95,8 @@ app.get('/countryWise',async(req,res)=>{
             //data.sort((a, b) => parseFloat(b.cases) - parseFloat(a.cases));
             // Work with JSON data here
            // data = JSON.stringify(data)
+           //console.log(data);
+           
             res.render("countryWise", { data:data});
             //console.log(data)
         })

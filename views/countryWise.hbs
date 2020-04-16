@@ -78,18 +78,13 @@
 <body>
 
     <div class="container">
-        <nav class="navbar navbar-light bg-light">
-            <a class="navbar-brand" href="#">
-                <img src="https://images.newscientist.com/wp-content/uploads/2020/02/11165812/c0481846-wuhan_novel_coronavirus_illustration-spl.jpg?"
-                    width="50" height="50" class="d-inline-block align-top" alt="">
-                <strong><span>The CoronoMeter</span> </strong>
-            </a>
-        </nav>
+        {{>navbar}}
 
         <h1>Confirmed Cases and Deaths by Country</h1>
         <a href="/" id="tg"><u>   View total figures   </u></a>
         <a href="/countryWiseYesterday" id="tg"><u>Yesterday numbers</u> </a>
         <a href="/USAstates" id="tg"><u>USA state wise</u></a>
+        <a href="/India" id="tg"><u>INDIA state wise</u></a>
         <br>
         <table class="table" style="width: 90%;" border="1">
             <thead>
