@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,48 +10,55 @@
 
 </head>
 <style>
-    #tt{
-        font-size: 25px;;
+    #tt {
+        font-size: 25px;
+        ;
     }
-    .row{
-        margin-bottom: 15px;;
-    }
-    .card{
+
+    .row {
         margin-bottom: 15px;
-       
+        ;
+    }
+
+    .card {
+        margin-bottom: 15px;
+
     }
 </style>
+
 <body>
     <div class="container text-center">
         {{>navbar}}
         <br><br>
         <h1 style="color: gray; background:linen">CORONA LATEST UPDATES AND FIGURES WORLDWIDE</h1>
 
-            <div class="row" style="margin-top: 50px;;">
-                <div class="col md-8 sm-9"><h2 style="font-family: archia;font-size:26px;">INDIA COVID-19 UPDATES</h2>
-                </div>
-                <div class="col md-2 sm-3" style="text-align: right;">
-                    <h6>Last updated on : {{d}}</h6>
-                </div>
-                
+        <div class="row" style="margin-top: 50px;;">
+            <div class="col md-8 sm-9">
+                <h2 style="font-family: archia;font-size:26px;">INDIA COVID-19 UPDATES</h2>
             </div>
-            <div class="row justify-content-around">
+            <div class="col md-2 sm-3" style="text-align: right;">
+                <h6>Last updated on : {{d}}</h6>
+            </div>
+
+        </div>
+        <div class="row justify-content-around">
             {{#each st}}
             {{#ifEquals  this.state "Total" }}
             <div class="col-md-3-sm-6" id="tt" style="color: #ff073a;">Total Cases : {{this.confirmed}} </div>
-            <div class="col-md-3-sm-6" id="tt" style="color: rgb(220, 183, 20);">Cases Today : {{this.deltaconfirmed}}</div>
+            <div class="col-md-3-sm-6" id="tt" style="color: rgb(220, 183, 20);">Cases Today : {{this.deltaconfirmed}}
+            </div>
             <div class="col-md-3-sm-6" id="tt" style="color:  #46a728;">Recovered : {{this.recovered}}</div>
             <div class="col-md-3-sm-6" id="tt" style="color: rgb(104, 97, 97);">Deaths : {{this.deaths}}</div>
             {{/ifEquals}}
             {{/each}}
-            </div>
+        </div>
 
-            <div class="row justify-content-around">
-                {{#each st}}
-                {{#ifEquals  this.state "Total" }}
+        <div class="row justify-content-around">
+            {{#each st}}
+            {{#ifEquals  this.state "Total" }}
 
-             {{else}}
-            
+            {{else}}
+
             <div class="col-md-3-sm-6">
                 <div class="card" style="width: 18rem;">
                     <div class="card-body" style="text-align: center;background-color:snow">
@@ -70,4 +78,5 @@
         </div>
     </div>
 </body>
+
 </html>

@@ -56,25 +56,26 @@
         {{>navbar}}
         <br><br>
         <h1 style="color: gray; background:linen">CORONA LATEST UPDATES AND FIGURES WORLDWIDE</h1>
-    
+
 
         <h2>Total Cases: <span style="color: red;">{{data.cases}}</span></h2>
         <a href="/countryWise"><u>View by Country</u></a>
         <h2>Total Cases Today: <span style="color: brown;">{{data.todayCases}}</span> </h2>
-        <a href="/yesterday"><u>Yesterday's Data</u></a>      
+        <a href="/yesterday"><u>Yesterday's Data</u></a>
         <br>
 
         <h2 id="h2">Total Deaths: <span style="color:slategrey;">{{data.deaths}}</span> </h2>
 
-        
+
         <h2 id="h2">Total Recovered: <span style="color: yellowgreen;">{{data.recovered}}</span></h2>
-        <a href="/India">View Detailed info of INDIA states wise numbers </a><hr>
+        <a href="/India">View Detailed info of INDIA states wise numbers </a>
+        <hr>
         <a href="/USAstates">View Detailed info of USA states wise numbers </a>
         <h2 id="h2">Affected Countries: <span style="color:slategrey;">{{data.affectedCountries}}</span> </h2>
-            
-            
+
+
         <div class="row">
-        
+
             <div class="col md-3 sm-6">
                 <div class="card" style="width: 18rem;background-color:ivory">
                     <div class="card-body">
@@ -85,7 +86,7 @@
                         <h6 style="color:lightslategray">Currently infected patients</h6>
                         <br>
                         <h5><span>Critical cases : <strong>{{data.critical}}</strong></span></h5>
-        
+
                     </div>
                 </div>
             </div>
@@ -99,7 +100,7 @@
                         <br>
                         <h5><span>Recovered cases : <strong>{{data.recovered}}</strong></span></h5>
                         <h5><span>Deaths : <strong>{{data.deaths}}</strong></span></h5>
-        
+
                     </div>
                 </div>
             </div>
@@ -117,7 +118,7 @@
                     </div>
                 </div>
             </div>
-        
+
         </div>
         <h3>Last Updated on : <span style="color: darkcyan;">{{d}}</span></h3>
         <footer class="foot">

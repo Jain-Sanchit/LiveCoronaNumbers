@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,26 +10,27 @@
 
 </head>
 <style>
-    .card{
-        margin: 15px;;
+    .card {
+        margin: 15px;
+        ;
     }
-    
 </style>
+
 <body>
     <div class="container">
-    {{>navbar}}
-    <br><br>
-    <h1 style="color: gray; background:linen">CORONA LATEST UPDATES AND FIGURES IN USA STATES</h1>
-       
-       <h4><a href="/">View Total Figures</a></h4>
-       <h4><a href="/countryWise">View All Country figures</a></h4>
-       
-       <div class="row justify-content-around">
-        {{#each data}}
+        {{>navbar}}
+        <br><br>
+        <h1 style="color: gray; background:linen">CORONA LATEST UPDATES AND FIGURES IN USA STATES</h1>
+
+        <h4><a href="/">View Total Figures</a></h4>
+        <h4><a href="/countryWise">View All Country figures</a></h4>
+
+        <div class="row justify-content-around">
+            {{#each data}}
             <div class="col-md-3-sm-6">
                 <div class="card" style="width: 18rem;">
                     <div class="card-body" style="text-align: center;background-color:snow">
-                        <h5 class="card-title" >{{this.state}}</h5>
+                        <h5 class="card-title">{{this.state}}</h5>
                         <hr>
                         <h5 class="card-text">Cases: <strong>{{this.cases}}</strong></h5>
                         <h6>Today Cases : <strong style="color: salmon;">{{this.todayCases}}</strong></h6>
@@ -38,10 +40,11 @@
                     </div>
                 </div>
             </div>
-        {{/each}}
+            {{/each}}
         </div>
 
-    
+
     </div>
 </body>
+
 </html>
