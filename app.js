@@ -86,7 +86,7 @@ app.get("/India", async (req, res) => {
 });
 
 app.get("/yesterday", async (req, res) => {
-  let data = await fetch("https://corona.lmao.ninja/v2/yesterday/all")
+  let data = await fetch("https://corona.lmao.ninja/v2/all?yesterday=true")
     .then((response) => {
       return response.json();
     })
@@ -122,7 +122,7 @@ app.get("/countryWise", async (req, res) => {
     });
 });
 app.get("/countryWiseYesterday", async (req, res) => {
-  let data = await fetch("https://corona.lmao.ninja/v2/yesterday?sort=cases")
+  let data = await fetch("https://corona.lmao.ninja/v2/countries?yesterday=true&sort=cases")
     .then((response) => {
       return response.json();
     })
