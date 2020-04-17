@@ -10,7 +10,7 @@ const path = require("path");
 
 const covid = require("novelcovid");
 const fetch = require("node-fetch");
-var count=0;
+var count=180;
 app.set("view engine", "hbs");
 app.use(express.urlencoded({ extended: true }));
 
