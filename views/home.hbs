@@ -32,12 +32,12 @@
     }
 
     .foot {
-        position: absolute;
-        left: 0;
+        
+        
+        
         bottom: 0;
-        width: 100%;
-
-        text-align: center;
+        margin: 0 auto;
+        
     }
 
     #h2 {
@@ -53,189 +53,240 @@
         display: inline-block;
         margin-right: 20px;
         margin-left: 20px;
-        ;
+        margin-bottom: 25px;
     }
+   @media screen and (max-width: 1000px){
+       #who
+       {
+           display: none;
+       }
+   }
 </style>
 
 <body>
-
-    <div class="container text-center">
-        {{>navbar}}
-        <br><br>
-        <h1 style="color: gray; background:linen">CORONA LATEST UPDATES AND FIGURES WORLDWIDE</h1>
-
-
-        <h2>Total Cases: <span style="color: red;">{{data.cases}}</span></h2>
-        <a href="/countryWise"><u>View by Country</u></a>
-        <h2>Total Cases Today: <span style="color: brown;">{{data.todayCases}}</span> </h2>
-        <a href="/yesterday"><u>Yesterday's Data</u></a>
-        <br>
-
-        <h2 id="h2">Total Deaths: <span style="color:slategrey;">{{data.deaths}}</span> </h2>
-
-
-        <h2 id="h2">Total Recovered: <span style="color: yellowgreen;">{{data.recovered}}</span></h2>
-        <a href="/India">View Detailed info of INDIA states wise numbers </a>
-        <hr>
-        <a href="/USAstates">View Detailed info of USA states wise numbers </a>
-        <h2 id="h2">Affected Countries: <span style="color:slategrey;">{{data.affectedCountries}}</span> </h2>
-
-
-        <div class="row">
-
-            <div class="col md-3 sm-6">
-                <div class="card" style="width: 18rem;background-color:ivory">
-                    <div class="card-body">
-                        <h4 class="card-title">Active Cases</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">Cases with an outcome</h6>
-                        <hr>
-                        <h4><strong>{{data.active}}</strong></h4>
-                        <h6 style="color:lightslategray">Currently infected patients</h6>
-                        <br>
-                        <h5><span>Critical cases : <strong>{{data.critical}}</strong></span></h5>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col md-3 sm-6">
-                <div class="card" style="width: 18rem;background-color:ivory">
-                    <div class="card-body">
-                        <h4 class="card-title">Closed Cases</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">Cases with an outcome</h6>
-                        <hr>
-                        <h4><strong>{{x}}</strong></h4>
-                        <br>
-                        <h5><span>Recovered cases : <strong>{{data.recovered}}</strong></span></h5>
-                        <h5><span>Deaths : <strong>{{data.deaths}}</strong></span></h5>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col md-3 sm-6">
-                <div class="card" style="width: 18rem;background-color:ivory">
-                    <div class="card-body">
-                        <h4 class="card-title">Total Tests</h4>
-                        <h6 class="card-subtitle mb-2 text-muted">Tests done world wide</h6>
-                        <hr>
-                        <h4><strong>{{data.tests}}</strong></h4>
-                        <h6 style="color:lightslategray">Total tests</h6>
-                        <br>
-                        <h5><span>Tests per million : <strong>{{data.testsPerOneMillion}}</strong></span></h5>
-                        <h5><span>Cases Per million : <strong>{{data.casesPerOneMillion}}</strong> </span></h5>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <h3>Last Updated on : <span style="color: darkcyan;">{{d}}</span></h3>
-        <br>
-        <h2 style="color: rgb(204, 127, 27);"><u><strong>PREVENTIONS</strong></u></h2>
-        <h3 style="text-align: left;"><u><strong>Basic protective measures against the new coronavirus</strong></u></h3>
-        <p style="font-size: 20px;text-align:left;">Stay aware of the latest information on the COVID-19 outbreak, available on the WHO website and through your
-            national
-            and local public health authority. Most people who become infected experience mild illness and recover, but
-            it can be
-            more severe for others. Take care of your health and protect others by doing the following:
-        </p>
-        <h3 style="text-align: left;"><u><strong>Wash your hands frequently</strong>  </u></h3>
-        <p style="font-size: 20px;text-align:left;">Regularly and thoroughly clean your hands with an alcohol-based hand rub or wash them with soap and water.
-        <br><br>
-        <strong>Why?</strong>  Washing your hands with soap and water or using alcohol-based hand rub kills viruses that may be on your hands.</p>
-        <h3 style="text-align: left;"><u><strong>Maintain social distancing</strong> </u></h3>
-        <p style="font-size: 20px;text-align:left;">
-            Maintain at least 1 metre (3 feet) distance between yourself and anyone who is coughing or sneezing.
+    
+        <div class="container text-center">
+            {{>navbar}}
             <br><br>
-            <strong>Why?</strong>  When someone coughs or sneezes they spray small liquid droplets from their nose or mouth which may contain virus.
-            If you are too close, you can breathe in the droplets, including the COVID-19 virus if the person coughing has the
-            disease.
-        </p>
-        <h3 style="text-align: left;"><u><strong>Avoid touching eyes, nose and mouth</strong> </u></h3>
-        <p style="font-size: 20px;text-align:left;">
-           <strong>Why?</strong>  Hands touch many surfaces and can pick up viruses. Once contaminated, hands can transfer the virus to your eyes,
-            nose or mouth. From there, the virus can enter your body and can make you sick.
-        </p>
-        <h3 style="text-align: left;"><u><strong>Practice respiratory hygiene</strong></u></h3>
-        <p style="font-size: 20px;text-align:left;">
-            Make sure you, and the people around you, follow good respiratory hygiene. This means covering your mouth and nose with
-            your bent elbow or tissue when you cough or sneeze. Then dispose of the used tissue immediately.
-            <br><br>
-            <strong>Why?</strong>  Droplets spread virus. By following good respiratory hygiene you protect the people around you from viruses such as
-            cold, flu and COVID-19.
-        </p>
-        <h3 style="text-align: left;"><u><strong>If you have fever, cough and difficulty breathing, seek medical care early</strong></u></h3>
-        <p style="font-size: 20px;text-align:left;">
-            Stay home if you feel unwell. If you have a fever, cough and difficulty breathing, seek medical attention and call in
-            advance. Follow the directions of your local health authority.
-            <br>
-            <br>
-            <strong>Why?</strong>  National and local authorities will have the most up to date information on the situation in your area. Calling in
-            advance will allow your health care provider to quickly direct you to the right health facility. This will also protect
-            you and help prevent spread of viruses and other infections.
-        </p>
-        <h3 style="text-align: left;"><u><strong>Stay informed and follow advice given by your healthcare provider</strong></u></h3>
-        <p style="font-size: 20px;text-align:left;">
-            Stay informed on the latest developments about COVID-19. Follow advice given by your healthcare provider, your national
-            and local public health authority or your employer on how to protect yourself and others from COVID-19.
-            <br><br>
-            <strong>Why?</strong>  National and local authorities will have the most up to date information on whether COVID-19 is spreading in your
-            area. They are best placed to advise on what people in your area should be doing to protect themselves.
-        </p>
-
-        <h2><strong><u>Protection measures for persons who are in or have recently visited (past 14 days) areas where COVID-19 is spreading</u></strong></h2>
-        <hr>
-        <ul style="text-align: left;font-size:20px;">
-            <li>Follow the guidance outlined above.</li>
-            <li>Stay at home if you begin to feel unwell, even with mild symptoms such as headache and slight runny nose, until you
-            recover. <strong>Why?</strong>  Avoiding contact with others and visits to medical facilities will allow these facilities to operate more
-            effectively and help protect you and others from possible COVID-19 and other viruses.</li>
-            <li>If you develop fever, cough and difficulty breathing, seek medical advice promptly as this may be due to a respiratory
-            infection or other serious condition. Call in advance and tell your provider of any recent travel or contact with
-            travelers. <strong>Why?</strong>  Calling in advance will allow your health care provider to quickly direct you to the right health
-            facility. This will also help to prevent possible spread of COVID-19 and other viruses.</li>
-        </ul>
-
-        <h2 ><strong><u>Ask WHO</u></strong> </h2>
-        <div class="d-flex justify-content-around">
-            <img id="who" src="https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/general-public/safe-greetings.tmb-1920v.png?sfvrsn=2e97004e_4">
-            <img id="who" src="https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/general-public/handshaking.tmb-1920v.png?sfvrsn=4aed53c5_4">
-            <img id="who" src="https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/general-public/wearing-gloves.tmb-1920v.png?sfvrsn=ec69b46a_4">
-            
-        </div>
-        <br><br>
-        <div class="d-flex justify-content-around">
-            <img id="who" src="https://www.who.int/images/default-source/health-topics/coronavirus/eng-mythbusting-ncov-(19).tmb-1920v.png?sfvrsn=99db25de_1">
-            <img id="who" src="https://www.who.int/images/default-source/health-topics/coronavirus/eng-mythbusting-ncov-(13).tmb-1920v.png?sfvrsn=d2a2dc01_1">
-            <img id="who" src="https://www.who.int/images/default-source/health-topics/coronavirus/eng-mythbusting-ncov-(23).tmb-1920v.png?sfvrsn=b399c676_1">
+            <h1 style="color: gray; background:linen">CORONA LATEST UPDATES AND FIGURES WORLDWIDE</h1>
         
-        </div>
-        <br><br>
-        <h2><strong><u>COVID-19 HOME CARE</u></strong> </h2>
-        <div class="d-flex justify-content-around">
-            <img id="who1" src="https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/home-care-posters/home-care-ill-people-a4-covid.tmb-1920v.png?sfvrsn=71718c4b_4" alt="home care 1 ">
-            <img id="who1" src="https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/home-care-posters/home-care-everyone-a4-covid.tmb-1920v.png?sfvrsn=29ba54d8_4" alt="home care 2 ">
-            <img id="who1" src="https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/home-care-posters/home-care-caregivers-a4-covid.tmb-1920v.png?sfvrsn=8c412ecd_4" alt="home care 3 ">
-        </div>
-        <br>
-        <div class="d-flex justify-content-around">
-            <img id="who1" src="https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/home-care-social-stills/home-care-ill-people-square-covid.tmb-1920v.png?sfvrsn=cc2c6ce4_4" alt="home care 4">
-            <img id="who1" src="https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/home-care-social-stills/home-care-ill-people-square-covid.tmb-1920v.png?sfvrsn=cc2c6ce4_4" alt="home care 5">
-            <img id="who1" src="https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/home-care-social-stills/home-care-caregivers-square-covid.tmb-1920v.png?sfvrsn=1fa44d91_4" alt="home care 6">
-        </div>
-        <br><br>
-        <h2><strong><u>How to cope with stress during 2019-nCoV outbreak</u> </strong> </h2><br>
-        <div class="d-flex justify-content-around">
-            <img id="who1" src="https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/general-public/stress/stress.tmb-1920v.jpg?sfvrsn=b8974505_17" alt="">
-            <img id="who1" src="https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/general-public/stress/children-stress.tmb-1920v.jpg?sfvrsn=343355fd_4" alt="cope up">
-        </div>
-        <br><br>
-        <footer class="foot">
-            <div class="row justify-content-around">
-                <p>Made by <strong>Jain-Sanchit</strong> </p>
-                <p><span style="font-size: 16px;;"><strong>Total Visitors Yet : {{count}}</strong> </span></p>
+        
+            <h2>Total Cases: <span style="color: red;">{{data.cases}}</span></h2>
+            <a href="/countryWise"><u>View by Country</u></a>
+            <h2>Total Cases Today: <span style="color: brown;">{{data.todayCases}}</span> </h2>
+            <a href="/yesterday"><u>Yesterday's Data</u></a>
+            <br>
+        
+            <h2 id="h2">Total Deaths: <span style="color:slategrey;">{{data.deaths}}</span> </h2>
+        
+        
+            <h2 id="h2">Total Recovered: <span style="color: yellowgreen;">{{data.recovered}}</span></h2>
+            <a href="/India">View Detailed info of INDIA states wise numbers </a>
+            <hr>
+            <a href="/USAstates">View Detailed info of USA states wise numbers </a>
+            <h2 id="h2">Affected Countries: <span style="color:slategrey;">{{data.affectedCountries}}</span> </h2>
+        
+        
+            <div class="row">
+        
+                <div class="col md-3 sm-6">
+                    <div class="card" style="width: 18rem;background-color:ivory">
+                        <div class="card-body">
+                            <h4 class="card-title">Active Cases</h4>
+                            <h6 class="card-subtitle mb-2 text-muted">Cases with an outcome</h6>
+                            <hr>
+                            <h4><strong>{{data.active}}</strong></h4>
+                            <h6 style="color:lightslategray">Currently infected patients</h6>
+                            <br>
+                            <h5><span>Critical cases : <strong>{{data.critical}}</strong></span></h5>
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="col md-3 sm-6">
+                    <div class="card" style="width: 18rem;background-color:ivory">
+                        <div class="card-body">
+                            <h4 class="card-title">Closed Cases</h4>
+                            <h6 class="card-subtitle mb-2 text-muted">Cases with an outcome</h6>
+                            <hr>
+                            <h4><strong>{{x}}</strong></h4>
+                            <br>
+                            <h5><span>Recovered cases : <strong>{{data.recovered}}</strong></span></h5>
+                            <h5><span>Deaths : <strong>{{data.deaths}}</strong></span></h5>
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="col md-3 sm-6">
+                    <div class="card" style="width: 18rem;background-color:ivory">
+                        <div class="card-body">
+                            <h4 class="card-title">Total Tests</h4>
+                            <h6 class="card-subtitle mb-2 text-muted">Tests done world wide</h6>
+                            <hr>
+                            <h4><strong>{{data.tests}}</strong></h4>
+                            <h6 style="color:lightslategray">Total tests</h6>
+                            <br>
+                            <h5><span>Tests per million : <strong>{{data.testsPerOneMillion}}</strong></span></h5>
+                            <h5><span>Cases Per million : <strong>{{data.casesPerOneMillion}}</strong> </span></h5>
+                        </div>
+                    </div>
+                </div>
+        
             </div>
-
-        </footer>
-    </div>
+            <h3>Last Updated on : <span style="color: darkcyan;">{{d}}</span></h3>
+            <br>
+            <h2 style="color: rgb(204, 127, 27);"><u><strong>PREVENTIONS</strong></u></h2>
+            <h3 style="text-align: left;"><u><strong>Basic protective measures against the new coronavirus</strong></u></h3>
+            <p style="font-size: 20px;text-align:left;">Stay aware of the latest information on the COVID-19 outbreak, available
+                on the WHO website and through your
+                national
+                and local public health authority. Most people who become infected experience mild illness and recover, but
+                it can be
+                more severe for others. Take care of your health and protect others by doing the following:
+            </p>
+            <h3 style="text-align: left;"><u><strong>Wash your hands frequently</strong> </u></h3>
+            <p style="font-size: 20px;text-align:left;">Regularly and thoroughly clean your hands with an alcohol-based hand rub
+                or wash them with soap and water.
+                <br><br>
+                <strong>Why?</strong> Washing your hands with soap and water or using alcohol-based hand rub kills viruses that
+                may be on your hands.</p>
+            <h3 style="text-align: left;"><u><strong>Maintain social distancing</strong> </u></h3>
+            <p style="font-size: 20px;text-align:left;">
+                Maintain at least 1 metre (3 feet) distance between yourself and anyone who is coughing or sneezing.
+                <br><br>
+                <strong>Why?</strong> When someone coughs or sneezes they spray small liquid droplets from their nose or mouth
+                which may contain virus.
+                If you are too close, you can breathe in the droplets, including the COVID-19 virus if the person coughing has
+                the
+                disease.
+            </p>
+            <h3 style="text-align: left;"><u><strong>Avoid touching eyes, nose and mouth</strong> </u></h3>
+            <p style="font-size: 20px;text-align:left;">
+                <strong>Why?</strong> Hands touch many surfaces and can pick up viruses. Once contaminated, hands can transfer
+                the virus to your eyes,
+                nose or mouth. From there, the virus can enter your body and can make you sick.
+            </p>
+            <h3 style="text-align: left;"><u><strong>Practice respiratory hygiene</strong></u></h3>
+            <p style="font-size: 20px;text-align:left;">
+                Make sure you, and the people around you, follow good respiratory hygiene. This means covering your mouth and
+                nose with
+                your bent elbow or tissue when you cough or sneeze. Then dispose of the used tissue immediately.
+                <br><br>
+                <strong>Why?</strong> Droplets spread virus. By following good respiratory hygiene you protect the people around
+                you from viruses such as
+                cold, flu and COVID-19.
+            </p>
+            <h3 style="text-align: left;"><u><strong>If you have fever, cough and difficulty breathing, seek medical care
+                        early</strong></u></h3>
+            <p style="font-size: 20px;text-align:left;">
+                Stay home if you feel unwell. If you have a fever, cough and difficulty breathing, seek medical attention and
+                call in
+                advance. Follow the directions of your local health authority.
+                <br>
+                <br>
+                <strong>Why?</strong> National and local authorities will have the most up to date information on the situation
+                in your area. Calling in
+                advance will allow your health care provider to quickly direct you to the right health facility. This will also
+                protect
+                you and help prevent spread of viruses and other infections.
+            </p>
+            <h3 style="text-align: left;"><u><strong>Stay informed and follow advice given by your healthcare
+                        provider</strong></u></h3>
+            <p style="font-size: 20px;text-align:left;">
+                Stay informed on the latest developments about COVID-19. Follow advice given by your healthcare provider, your
+                national
+                and local public health authority or your employer on how to protect yourself and others from COVID-19.
+                <br><br>
+                <strong>Why?</strong> National and local authorities will have the most up to date information on whether
+                COVID-19 is spreading in your
+                area. They are best placed to advise on what people in your area should be doing to protect themselves.
+            </p>
+        
+            <h2><strong><u>Protection measures for persons who are in or have recently visited (past 14 days) areas where
+                        COVID-19 is spreading</u></strong></h2>
+            <hr>
+            <ul style="text-align: left;font-size:20px;">
+                <li>Follow the guidance outlined above.</li>
+                <li>Stay at home if you begin to feel unwell, even with mild symptoms such as headache and slight runny nose,
+                    until you
+                    recover. <strong>Why?</strong> Avoiding contact with others and visits to medical facilities will allow
+                    these facilities to operate more
+                    effectively and help protect you and others from possible COVID-19 and other viruses.</li>
+                <li>If you develop fever, cough and difficulty breathing, seek medical advice promptly as this may be due to a
+                    respiratory
+                    infection or other serious condition. Call in advance and tell your provider of any recent travel or contact
+                    with
+                    travelers. <strong>Why?</strong> Calling in advance will allow your health care provider to quickly direct
+                    you to the right health
+                    facility. This will also help to prevent possible spread of COVID-19 and other viruses.</li>
+            </ul>
+        
+            <h2><strong><u>Ask WHO</u></strong> </h2>
+            <div class="d-flex justify-content-around">
+                <img id="who"
+                    src="https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/general-public/safe-greetings.tmb-1920v.png?sfvrsn=2e97004e_4">
+                <img id="who"
+                    src="https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/general-public/handshaking.tmb-1920v.png?sfvrsn=4aed53c5_4">
+                <img id="who"
+                    src="https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/general-public/wearing-gloves.tmb-1920v.png?sfvrsn=ec69b46a_4">
+        
+            </div>
+            <br><br>
+            <div class="d-flex justify-content-around">
+                <img id="who"
+                    src="https://www.who.int/images/default-source/health-topics/coronavirus/eng-mythbusting-ncov-(19).tmb-1920v.png?sfvrsn=99db25de_1">
+                <img id="who"
+                    src="https://www.who.int/images/default-source/health-topics/coronavirus/eng-mythbusting-ncov-(13).tmb-1920v.png?sfvrsn=d2a2dc01_1">
+                <img id="who"
+                    src="https://www.who.int/images/default-source/health-topics/coronavirus/eng-mythbusting-ncov-(23).tmb-1920v.png?sfvrsn=b399c676_1">
+        
+            </div>
+            <br><br>
+            <h2><strong><u>COVID-19 HOME CARE</u></strong> </h2>
+            <div class="d-flex justify-content-around">
+                <img id="who1"
+                    src="https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/home-care-posters/home-care-ill-people-a4-covid.tmb-1920v.png?sfvrsn=71718c4b_4"
+                    alt="home care 1 ">
+                <img id="who1"
+                    src="https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/home-care-posters/home-care-everyone-a4-covid.tmb-1920v.png?sfvrsn=29ba54d8_4"
+                    alt="home care 2 ">
+                <img id="who1"
+                    src="https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/home-care-posters/home-care-caregivers-a4-covid.tmb-1920v.png?sfvrsn=8c412ecd_4"
+                    alt="home care 3 ">
+            </div>
+            <br>
+            <div class="d-flex justify-content-around">
+                <img id="who1"
+                    src="https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/home-care-social-stills/home-care-ill-people-square-covid.tmb-1920v.png?sfvrsn=cc2c6ce4_4"
+                    alt="home care 4">
+                <img id="who1"
+                    src="https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/home-care-social-stills/home-care-ill-people-square-covid.tmb-1920v.png?sfvrsn=cc2c6ce4_4"
+                    alt="home care 5">
+                <img id="who1"
+                    src="https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/home-care-social-stills/home-care-caregivers-square-covid.tmb-1920v.png?sfvrsn=1fa44d91_4"
+                    alt="home care 6">
+            </div>
+            <br><br>
+            <h2><strong><u>How to cope with stress during 2019-nCoV outbreak</u> </strong> </h2><br>
+            <div class="d-flex justify-content-around">
+                <img id="who1"
+                    src="https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/general-public/stress/stress.tmb-1920v.jpg?sfvrsn=b8974505_17"
+                    alt="">
+                <img id="who1"
+                    src="https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/general-public/stress/children-stress.tmb-1920v.jpg?sfvrsn=343355fd_4"
+                    alt="cope up">
+            </div>
+            <br><br>
+            <footer class="foot">
+                
+                    <p>Made by <strong>Jain-Sanchit <span style="font-size: 16px; margin-left:25px"><strong>Total Visitors Yet : {{count}}</strong> </span> </strong> </p>
+                    
+                
+        
+            </footer>
+        </div>
+    
+    
 
 
 </body>
