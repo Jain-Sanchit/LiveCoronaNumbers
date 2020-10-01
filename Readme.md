@@ -1,6 +1,6 @@
 
  <h1 align="center">
-LiveCoronaStats
+Live Corona Stats
 </h1>
 
 
@@ -12,13 +12,13 @@ Try the website: [Live Corona Numbers](http://coronacasecount.live/)
 
 ## 🧐 Features
 
-- **World wide total figures** 
-- **Figures of today and yesterday**
-- **Recovery figures and death figures**
-- **India state wise figures**
-- **USA state wise figures**
-- **Country wise figures of current day and previous day**
-- **Some general FAQ and precautions**
+- **Global Data** 
+- **Data From Yesterday and Today**
+- **Recovery Status and Death figures**
+- **India State-wise Data**
+- **USA state-wise Data**
+- **Country wise Data of Today and Yesterday**
+- **Some general FAQ's and Safety Precautions**
 
 
 ## 🛠️ Installation Steps
