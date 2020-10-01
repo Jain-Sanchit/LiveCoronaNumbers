@@ -23,6 +23,8 @@ Try the website: [Live Corona Numbers](http://coronacasecount.live/)
 
 ## 🛠️ Installation Steps
 
+**First Star and Fork the repo** 
+
 1. Clone the repository
 
 ```bash
