@@ -8,17 +8,17 @@ Shows The live figures for corona in the whole world and country wise too.
 Shows the latest figures of USA state wise and INDIA state wise .
 
 ## 🚀 Demo 
-Try the tool: [GitHub Profile README Generator](http://coronacasecount.live/)
+Try the website: [Live Corona Numbers](http://coronacasecount.live/)
 
 ## 🧐 Features
 
-- ** World wide total figures ** 
-- ** Figures of today and yesterday **
-- ** Recovery figures and death figures **
-- ** India state wise figures **
-- ** USA state wise figures **
-- ** Country wise figures of current day and previous day**
-- ** Some general FAQ and precautions **
+- **World wide total figures** 
+- **Figures of today and yesterday**
+- **Recovery figures and death figures**
+- **India state wise figures**
+- **USA state wise figures**
+- **Country wise figures of current day and previous day**
+- **Some general FAQ and precautions**
 
 
 ## 🛠️ Installation Steps
@@ -61,9 +61,9 @@ Please contribute using [GitHub Flow](https://guides.github.com/introduction/flo
 
 
 ## 💻 Built with
-- [Nodejs]
-- [Handlebars] for views
-- Bases on API via Covid19india Api and novelcovid .
+- **Nodejs** for server
+- **Handlebars** for pages
+- Bases on **API** via Covid19india Api and novelcovid .
 
 <hr>
 <p align="center">
