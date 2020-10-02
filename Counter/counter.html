@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body>
+    <p>This page was viewed </p>
+    <h1 id="count">0</h1>
+    <p>times</p>
+</body>
+<script>
+    const count = document.getElementById('count');
+    updateVisit();
+
+    function updateVisit() {
+        fetch('https://api.countapi.xyz/hit/coronacasecount.live/corona').then(
+            res => res.json()).then(res => {
+                count.innerHTML = res.value;
+            })
+
+    }
+</script>
+
+</html
